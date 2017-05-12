@@ -257,7 +257,7 @@ module ActiveAdmin
       end
 
       Rails.application.config.after_initialize do
-        ActionDispatch::Reloader.to_prepare do
+         ActiveSupport::Reloader.to_prepare do
           ActiveAdmin.application.unload!
           Rails.application.reload_routes!
         end
