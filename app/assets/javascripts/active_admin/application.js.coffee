@@ -2,7 +2,7 @@
 $(document).on 'ready page:load', ->
   # jQuery datepickers (also evaluates dynamically added HTML)
   $(document).on 'focus', '.datepicker:not(.hasDatepicker)', ->
-    defaults = dateFormat: 'yy-mm-dd'
+    defaults = dateFormat: 'mm/dd/yyyy'
     options = $(@).data 'datepicker-options'
     $(@).datepicker $.extend(defaults, options)
 
